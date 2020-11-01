@@ -6,6 +6,7 @@ import {Game} from './components/Game';
 import {Game2} from "./components/Game2";
 import {GameContextProvider} from "./contexts/GameContext";
 import {Display} from "./components/Display";
+import {AppRouter} from "./routes/AppRouter";
 
 function App() {
     const [youtubeLink, setYoutubeLink] = useState('');
@@ -13,11 +14,8 @@ function App() {
     return (
         <div className="App">
             <GameContextProvider>
-                <Game/>
-                <Game2/>
-                <Display/>
+                <AppRouter/>
             </GameContextProvider>
-
         </div>
     );
 }

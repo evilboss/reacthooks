@@ -9,7 +9,6 @@ export const Display = () => {
     return (<div className="display">
         <pre>
                     {JSON.stringify(game)}
-
         </pre>
 
     </div>)

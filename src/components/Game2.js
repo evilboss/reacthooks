@@ -9,9 +9,16 @@ export const Game2 = () => {
     return (<div className="game">
         <button onClick={
             () => {
+                dispatch({type: 'UPDATE', payload: {status: true}});
+            }
+        }>Set
+        </button>
+
+        <button onClick={
+            () => {
                 dispatch({type: 'UPDATE', payload: {status: false}});
             }
-        }>Dont Update
+        }>Dont set
         </button>
         <button onClick={
             () => {
