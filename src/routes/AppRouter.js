@@ -4,6 +4,7 @@ import {Game} from "../components/Game";
 import {Game2} from "../components/Game2";
 import {Display} from "../components/Display";
 import {Identity} from "../components/Identity";
+import {ThemeContextProvider} from '../components/ThemedButton';
 
 export const AppRouter = () => {
     return (
@@ -32,6 +33,8 @@ export const AppRouter = () => {
                 </Switch>
                 <Identity/>
                 <Display/>
+                <ThemeContextProvider theme='dark'/>
+
             </div>
         </Router>
     )
