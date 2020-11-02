@@ -1,16 +1,8 @@
 import React, {createContext, useContext, useReducer} from 'react';
-
-const initialState = {
-    game: {},
-    loading: true,
-    error: null
-};
-const reducer = (state, action) => {
+export const gameReducer = (state, action) => {
     switch (action.type) {
         case "UPDATE":
-            return {
-                game: {...state.game, ...action.payload}
-            };
+            return {...state, ...action.payload};
         case "DELETE":
             return {
                 game: {}
@@ -28,17 +20,12 @@ const reducer = (state, action) => {
             return {
                 loading: false
             };
-        default:
-            throw new Error();
     }
 };
 export const GameContext = createContext();
 export const GameContextProvider = (props) => {
-    const [state, dispatch] = useReducer(reducer, initialState);
     return (
-        <GameContext.Provider value={[state, dispatch]}>
-            {props.children}
-        </GameContext.Provider>
+        <h1></h1>
     );
 }
 

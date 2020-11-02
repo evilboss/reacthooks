@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import {Game} from "../components/Game";
 import {Game2} from "../components/Game2";
 import {Display} from "../components/Display";
+import {Identity} from "../components/Identity";
 
 export const AppRouter = () => {
     return (
@@ -29,6 +30,7 @@ export const AppRouter = () => {
                     </Route>
 
                 </Switch>
+                <Identity/>
                 <Display/>
             </div>
         </Router>

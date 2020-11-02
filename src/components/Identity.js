@@ -1,29 +1,28 @@
-import {gameReducer, gameActions} from "../reducers/gameReducer";
-import {useContext, useReducer} from "react";
+import React, {useContext, useReducer} from "react";
 import {AppContext} from "../contexts/AppContext";
 
-export const Game2 = () => {
+export const Identity = () => {
     const [state, dispatch] = useContext(AppContext);
-
+    console.log(state);
     return (<div className="game">
         <button onClick={
             () => {
-                dispatch({type: 'UPDATE', payload: {status: true}});
+                dispatch({type: 'ACTION_B'});
             }
-        }>Set
+        }>ACTION_B
         </button>
 
         <button onClick={
             () => {
-                dispatch({type: 'UPDATE', payload: {status: false}});
+                dispatch({type: 'ACTION_A'});
             }
-        }>Dont set
+        }>ACTION_A
         </button>
         <button onClick={
             () => {
-                dispatch({type: 'DELETE'});
+                dispatch({type: 'CLEAR'});
             }
-        }>Delete
+        }>CLEAR
         </button>
 
     </div>)
