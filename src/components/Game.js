@@ -1,7 +1,9 @@
 import {gameReducer, gameActions} from "../reducers/gameReducer";
-import {useContext, useReducer} from "react";
+import React, {useContext, useReducer} from "react";
 import {GameContext} from '../contexts/GameContext';
 import {AppContext} from "../contexts/AppContext";
+
+
 
 export const Game = () => {
     const [state, dispatch] = useContext(AppContext);

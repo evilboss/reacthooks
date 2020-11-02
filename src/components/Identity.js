@@ -3,7 +3,6 @@ import {AppContext} from "../contexts/AppContext";
 
 export const Identity = () => {
     const [state, dispatch] = useContext(AppContext);
-    console.log(state);
     return (<div className="game">
         <button onClick={
             () => {

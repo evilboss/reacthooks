@@ -1,9 +1,17 @@
-import {createClient} from 'react-fetching-library';
+import axios from "axios";
 
-import {requestHostInterceptor} from './requestInterceptors/requestHostInterceptor';
+export const Client = (token) => {
+    const headers = {};
 
-// In real application this const will be stored in ENV's
-const HOST = 'https://private-34f3a-reactapiclient.apiary-mock.com';
-export const Client = createClient({
-    requestInterceptors: [requestHostInterceptor(HOST)]
-});
+    if (token) {
+        headers.authorization = `Bearer ${token}`;
+
+    }
+    return axios.create({
+
+        baseURL: `http://jsonplaceholder.typicode.com/`,
+        onError: () => {
+        }
+    });
+
+}
