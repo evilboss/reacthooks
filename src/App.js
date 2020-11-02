@@ -12,13 +12,17 @@ import {Display} from "./components/Display";
 import {AppRouter} from "./routes/AppRouter";
 import {AppContext, AppContextProvider} from "./contexts/AppContext";
 import {UserList} from "./components/UserList";
+import {PhraseContextProvider} from './contexts/PhraseContext';
 
 function App() {
 
     return (
         <div className="App">
+
             <AppContextProvider>
-                <AppRouter/>
+                <PhraseContextProvider>
+                    <AppRouter/>
+                </PhraseContextProvider>
             </AppContextProvider>
 
         </div>
