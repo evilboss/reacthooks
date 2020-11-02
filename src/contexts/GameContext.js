@@ -1,12 +1,12 @@
 import React, {createContext, useContext, useReducer} from 'react';
+
 export const gameReducer = (state, action) => {
     switch (action.type) {
         case "UPDATE":
             return {...state, ...action.payload};
         case "DELETE":
-            return {
-                game: {}
-            }
+        case 'CLEAR_ALL':
+            return {}
 
         case
         "START"
@@ -20,6 +20,9 @@ export const gameReducer = (state, action) => {
             return {
                 loading: false
             };
+        default:
+            return state;
+
     }
 };
 export const GameContext = createContext();

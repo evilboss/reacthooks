@@ -21,7 +21,7 @@ export const Game2 = () => {
         </button>
         <button onClick={
             () => {
-                dispatch({type: 'DELETE'});
+                dispatch({type: 'CLEAR_ALL'});
             }
         }>Delete
         </button>

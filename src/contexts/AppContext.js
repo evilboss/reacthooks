@@ -12,7 +12,6 @@ const initialLocation = {
 }
 
 const initialGameState = {
-    game: {},
     loading: true,
     error: null
 };
@@ -21,8 +20,10 @@ const initialGameState = {
 const identityReducer = (state, action) => {
     switch (action.type) {
         case 'ACTION_A':
-            console.log('ACTION_A');
             return {...state, name: 'Puli'};
+        case 'CLEAR':
+        case 'CLEAR_ALL':
+            return {...state, name: ''}
         default:
             return state;
     }
@@ -31,11 +32,9 @@ const identityReducer = (state, action) => {
 const locationReducer = (state, action) => {
     switch (action.type) {
         case 'ACTION_B':
-            console.log('action b');
             return {...state, city: 'Manchester'};
         case 'CLEAR':
-            console.log('action CLEAR');
-
+        case 'CLEAR_ALL':
             return {...state, name: '', country: '', city: ''}
         default:
             return state;
