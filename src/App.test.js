@@ -5,3 +5,7 @@ test('renders  react <App/>', () => {
     render(<App/>);
     expect(true).toBe(true);
 });
+test('renders  react <App/>', () => {
+    render(<App/>);
+    expect(true).toBe(true);
+});
